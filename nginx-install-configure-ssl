@@ -1,0 +1,168 @@
+login as: osboxes
+osboxes@192.168.1.198's password:
+Web console: https://localhost:9090/ or https://192.168.1.198:9090/
+
+Last login: Fri Jan 29 20:29:08 2021 from 192.168.1.205
+[osboxes@master ~]$ sudo su -
+[sudo] password for osboxes:
+[root@master ~]# yum install epel-release -y
+Last metadata expiration check: 0:48:50 ago on Sat 30 Jan 2021 06:26:42 PM EST.
+Dependencies resolved.
+=============================================================================================================================================================
+ Package                                  Architecture                       Version                                Repository                          Size
+=============================================================================================================================================================
+Installing:
+ epel-release                             noarch                             8-8.el8                                extras                              23 k
+
+Transaction Summary
+=============================================================================================================================================================
+Install  1 Package
+
+Total download size: 23 k
+Installed size: 32 k
+Downloading Packages:
+epel-release-8-8.el8.noarch.rpm                                                                                               64 kB/s |  23 kB     00:00
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                         38 kB/s |  23 kB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                     1/1
+  Installing       : epel-release-8-8.el8.noarch                                                                                                         1/1
+  Running scriptlet: epel-release-8-8.el8.noarch                                                                                                         1/1
+  Verifying        : epel-release-8-8.el8.noarch                                                                                                         1/1
+Installed products updated.
+
+Installed:
+  epel-release-8-8.el8.noarch
+
+Complete!
+[root@master ~]# yum install nginx -y
+Extra Packages for Enterprise Linux Modular 8 - x86_64                                                                       367 kB/s | 537 kB     00:01
+Extra Packages for Enterprise Linux 8 - x86_64                                                                               4.0 MB/s | 8.8 MB     00:02
+Last metadata expiration check: 0:00:01 ago on Sat 30 Jan 2021 07:15:58 PM EST.
+Dependencies resolved.
+=============================================================================================================================================================
+ Package                                     Architecture           Version                                                  Repository                 Size
+=============================================================================================================================================================
+Installing:
+ nginx                                       x86_64                 1:1.14.1-9.module_el8.0.0+184+e34fea82                   AppStream                 570 k
+Installing dependencies:
+ nginx-all-modules                           noarch                 1:1.14.1-9.module_el8.0.0+184+e34fea82                   AppStream                  23 k
+ nginx-filesystem                            noarch                 1:1.14.1-9.module_el8.0.0+184+e34fea82                   AppStream                  24 k
+ nginx-mod-http-image-filter                 x86_64                 1:1.14.1-9.module_el8.0.0+184+e34fea82                   AppStream                  35 k
+ nginx-mod-http-perl                         x86_64                 1:1.14.1-9.module_el8.0.0+184+e34fea82                   AppStream                  45 k
+ nginx-mod-http-xslt-filter                  x86_64                 1:1.14.1-9.module_el8.0.0+184+e34fea82                   AppStream                  33 k
+ nginx-mod-mail                              x86_64                 1:1.14.1-9.module_el8.0.0+184+e34fea82                   AppStream                  64 k
+ nginx-mod-stream                            x86_64                 1:1.14.1-9.module_el8.0.0+184+e34fea82                   AppStream                  85 k
+Enabling module streams:
+ nginx                                                              1.14
+
+Transaction Summary
+=============================================================================================================================================================
+Install  8 Packages
+
+Total download size: 881 k
+Installed size: 2.0 M
+Downloading Packages:
+(1/8): nginx-all-modules-1.14.1-9.module_el8.0.0+184+e34fea82.noarch.rpm                                                      76 kB/s |  23 kB     00:00
+(2/8): nginx-filesystem-1.14.1-9.module_el8.0.0+184+e34fea82.noarch.rpm                                                       77 kB/s |  24 kB     00:00
+(3/8): nginx-mod-http-perl-1.14.1-9.module_el8.0.0+184+e34fea82.x86_64.rpm                                                   144 kB/s |  45 kB     00:00
+(4/8): nginx-mod-http-image-filter-1.14.1-9.module_el8.0.0+184+e34fea82.x86_64.rpm                                           102 kB/s |  35 kB     00:00
+(5/8): nginx-mod-http-xslt-filter-1.14.1-9.module_el8.0.0+184+e34fea82.x86_64.rpm                                            103 kB/s |  33 kB     00:00
+(6/8): nginx-mod-mail-1.14.1-9.module_el8.0.0+184+e34fea82.x86_64.rpm                                                        163 kB/s |  64 kB     00:00
+(7/8): nginx-mod-stream-1.14.1-9.module_el8.0.0+184+e34fea82.x86_64.rpm                                                      175 kB/s |  85 kB     00:00
+(8/8): nginx-1.14.1-9.module_el8.0.0+184+e34fea82.x86_64.rpm                                                                 344 kB/s | 570 kB     00:01
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                        503 kB/s | 881 kB     00:01
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                     1/1
+  Running scriptlet: nginx-filesystem-1:1.14.1-9.module_el8.0.0+184+e34fea82.noarch                                                                      1/8
+  Installing       : nginx-filesystem-1:1.14.1-9.module_el8.0.0+184+e34fea82.noarch                                                                      1/8
+  Installing       : nginx-mod-http-image-filter-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                           2/8
+  Running scriptlet: nginx-mod-http-image-filter-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                           2/8
+  Installing       : nginx-mod-http-perl-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                   3/8
+  Running scriptlet: nginx-mod-http-perl-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                   3/8
+  Installing       : nginx-mod-http-xslt-filter-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                            4/8
+  Running scriptlet: nginx-mod-http-xslt-filter-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                            4/8
+  Installing       : nginx-mod-mail-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                        5/8
+  Running scriptlet: nginx-mod-mail-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                        5/8
+  Installing       : nginx-all-modules-1:1.14.1-9.module_el8.0.0+184+e34fea82.noarch                                                                     6/8
+  Installing       : nginx-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                                 7/8
+  Running scriptlet: nginx-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                                 7/8
+  Installing       : nginx-mod-stream-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                      8/8
+  Running scriptlet: nginx-mod-stream-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                      8/8
+  Verifying        : nginx-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                                 1/8
+  Verifying        : nginx-all-modules-1:1.14.1-9.module_el8.0.0+184+e34fea82.noarch                                                                     2/8
+  Verifying        : nginx-filesystem-1:1.14.1-9.module_el8.0.0+184+e34fea82.noarch                                                                      3/8
+  Verifying        : nginx-mod-http-image-filter-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                           4/8
+  Verifying        : nginx-mod-http-perl-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                   5/8
+  Verifying        : nginx-mod-http-xslt-filter-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                            6/8
+  Verifying        : nginx-mod-mail-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                        7/8
+  Verifying        : nginx-mod-stream-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                                                                      8/8
+Installed products updated.
+
+Installed:
+  nginx-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64                       nginx-all-modules-1:1.14.1-9.module_el8.0.0+184+e34fea82.noarch
+  nginx-filesystem-1:1.14.1-9.module_el8.0.0+184+e34fea82.noarch            nginx-mod-http-image-filter-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64
+  nginx-mod-http-perl-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64         nginx-mod-http-xslt-filter-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64
+  nginx-mod-mail-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64              nginx-mod-stream-1:1.14.1-9.module_el8.0.0+184+e34fea82.x86_64
+
+Complete!
+[root@master ~]# systemctl enable nginx
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
+[root@master ~]# systemctl start nginx
+[root@master ~]# curl -Ik http://master
+HTTP/1.1 200 OK
+Server: nginx/1.14.1
+Date: Sun, 31 Jan 2021 00:22:17 GMT
+Content-Type: text/html
+Content-Length: 4057
+Last-Modified: Mon, 07 Oct 2019 21:16:24 GMT
+Connection: keep-alive
+ETag: "5d9bab28-fd9"
+Accept-Ranges: bytes
+
+[root@master ~]# mkdir /etc/nginx/ssl
+[root@master ~]# cd /etc/nginx/ssl
+[root@master ssl]# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/server.key -out /etc/nginx/ssl/server.crt
+Generating a RSA private key
+............................................................................................+++++
+....................................+++++
+writing new private key to '/etc/nginx/ssl/server.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [XX]:US
+State or Province Name (full name) []:NC
+Locality Name (eg, city) [Default City]:Charlotte
+Organization Name (eg, company) [Default Company Ltd]:PAVAN, Inc
+Organizational Unit Name (eg, section) []:PAVAN
+Common Name (eg, your name or your server's hostname) []:master
+Email Address []:pavan@abc.com
+[root@master ssl]# vi /etc/nginx/nginx.conf
+[root@master ssl]# vi /etc/nginx/nginx.conf
+[root@master ssl]# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+[root@master ssl]# systemctl restart nginx
+[root@master ssl]# curl -Ik http://master
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.14.1
+Date: Sun, 31 Jan 2021 01:13:09 GMT
+Content-Type: text/html
+Content-Length: 185
+Connection: keep-alive
+Location: https://master/
+
